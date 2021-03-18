@@ -6,9 +6,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <body>
         <pre><b>Nombre y Apellidos = David Rodriguez</b></pre>
         <xsl:for-each select="ies/ciclos/ciclo">
-        <br></br>
-        <b>-</b><xsl:value-of select="nombre"/>
-        <br></br>
+        <ul>
+        <li><xsl:value-of select="nombre"/></li>
+    </ul>
         </xsl:for-each>
     </body>
 </html>
