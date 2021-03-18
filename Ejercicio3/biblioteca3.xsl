@@ -5,11 +5,26 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <html>
     <body>
         <pre><b>Nombre y Apellidos = David Rodriguez</b></pre>
+        <h1>IES Nuestra Sra. de los Remedios</h1>
+        <table border="1">
+            <tr>
+            <th>Nombre</th>
+            <th>Anio</th>
+            </tr>
         <xsl:for-each select="ies/ciclos/ciclo">
-        <br></br>
-        <b>-</b><xsl:value-of select="nombre"/>
-        <br></br>
+        
+        <tr>
+       <td><xsl:value-of select="nombre"/></td>
+
+       <td>
+
+           <xsl:value-of select="@anio"/>
+        </td>
+    
+        </tr>
         </xsl:for-each>
+    
+    </table>
     </body>
 </html>
 
